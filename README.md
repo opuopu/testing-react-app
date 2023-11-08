@@ -7,7 +7,7 @@ Install Some Dependencies
 ### STEP -2
 Setup Enviroment
 In vite.config.js file
-```
+```js
 /* eslint-disable react/no-unknown-property */
 /// <reference types="vitest"/>
 /// <reference types="vite/client"/>
@@ -23,6 +23,6 @@ export default defineConfig({
     setupFiles: ["./src/setupTest.js"],
   },
 });
-``` js
+```
 
 
