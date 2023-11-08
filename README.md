@@ -3,7 +3,7 @@
 
 ### STEP-1
 Install Some Dependencies
-=> yarn add vitest jsdom @testing-library/react @testing-library/jest-dom 
+``` yarn add vitest jsdom @testing-library/react @testing-library/jest-dom ```
 ### STEP -2
 Setup Enviroment
 In vite.config.js file
