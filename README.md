@@ -7,7 +7,7 @@ Install Some Dependencies
 yarn add vitest jsdom @testing-library/react @testing-library/jest-dom
  ```
 ### STEP -2
-Setup Enviroment
+Setup Enviroment <br/>
 Put This Code Block In **vite.config.js**
 ```js
 /* eslint-disable react/no-unknown-property */
@@ -26,5 +26,13 @@ export default defineConfig({
   },
 });
 ```
+### STEP -3
+Create A File Called setupTest.js In Src Root Directory  <br/>
+And Import This:
+```js
+import "@testing-library/jest-dom";
+
+```
+
 
 
