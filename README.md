@@ -8,7 +8,7 @@ yarn add vitest jsdom @testing-library/react @testing-library/jest-dom
  ```
 ### STEP -2
 Setup Enviroment
-In vite.config.js file
+Put This Code Block In ### vite.config.js 
 ```js
 /* eslint-disable react/no-unknown-property */
 /// <reference types="vitest"/>
