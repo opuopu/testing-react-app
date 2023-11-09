@@ -1,8 +1,35 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## TEST REACT APP WITH RTL
 
-Currently, two official plugins are available:
+### STEP-1 Install Some Dependencies
+```cmd
+yarn add vitest jsdom @testing-library/react @testing-library/jest-dom
+ ```
+### STEP -2 Setup Enviroment
+Put This Code Block In **vite.config.js**
+```js
+/* eslint-disable react/no-unknown-property */
+/// <reference types="vitest"/>
+/// <reference types="vite/client"/>
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  test: {
+    globals: true,
+    environment: "jsdom",
+    setupFiles: ["./src/setupTest.js"],
+  },
+});
+```
+### STEP -3 Create A File Called setupTest.js In Src Root Directory
+And Import This:
+```js
+import "@testing-library/jest-dom";
+
+```
+
+
+
