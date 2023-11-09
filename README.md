@@ -1,12 +1,15 @@
-
 ## TEST REACT APP WITH RTL
 
 ### STEP-1 Install Some Dependencies
+
 ```cmd
 yarn add vitest jsdom @testing-library/react @testing-library/jest-dom
- ```
+```
+
 ### STEP -2 Setup Enviroment
+
 Put This Code Block In **vite.config.js**
+
 ```js
 /* eslint-disable react/no-unknown-property */
 /// <reference types="vitest"/>
@@ -24,12 +27,17 @@ export default defineConfig({
   },
 });
 ```
-### STEP -3 Create A File Called setupTest.js In Src Root Directory
-And Import This:
-```js
-import "@testing-library/jest-dom";
 
+And Add This Script In **package.json**
+
+```js
+"test": "vitest --reporter verbose"
 ```
 
+### STEP -3 Create A File Called setupTest.js In Src Root Directory
 
+And Import This:
 
+```js
+import "@testing-library/jest-dom";
+```
