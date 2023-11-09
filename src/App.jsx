@@ -9,6 +9,8 @@ function App() {
   return (
     <>
       <h1>Hello World</h1>
+      <button>submit now</button>
+      <button>submit now2</button>
     </>
   );
 }
